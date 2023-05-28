@@ -55,11 +55,13 @@ fetch( dataSource )
     
     //template to reuse
    const template = `
-   <img src= ${student.Image}>
-   <h1> ${student.Name} </h1>
+   <main>
+   <figure><img src= ${student.Image}>
+   <figcaption><h1> ${student.Name} </h1></figcaption></figure>
   <p>${student.Emoji}</p>
   <blockquote>${student.Quote}</blockqoute>
   <h5>${student.Superpower}</h5>
+  </main>
 `
     gallery.insertAdjacentHTML(`afterbegin`, template) ;
   });
