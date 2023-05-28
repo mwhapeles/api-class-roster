@@ -55,28 +55,17 @@ fetch( dataSource )
     
     //template to reuse
    const template = `
-   <img src= ${student.Image} >
+   <img src= ${student.Image}>
    <h1> ${student.Name} </h1>
   <p>${student.Emoji}</p>
   <blockquote>${student.Quote}</blockqoute>
-  <p>${student.Superpower}</p>
+  <h5>${student.Superpower}</h5>
 `
     gallery.insertAdjacentHTML(`afterbegin`, template) ;
   });
   
 });
 
-
-document.querySelectorAll('student.Image').forEach( item => {
-    
-  // for each item i.e. card, do this
-  item.addEventListener('click', event => {
-    
-    // toggle class on card
-    item.classList.toggle('flipped');
-  })
-
-});
 
  //console.log(data);
  // console.log(data[9].Superpower);
