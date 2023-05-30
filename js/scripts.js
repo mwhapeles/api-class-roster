@@ -51,25 +51,44 @@ fetch( dataSource )
    const gallery = document.querySelector('.gallery');
   
   //for each record, insert into parent
-  data.forEach( (student) => {
+  data.forEach( ( student ) => {
     
     //template to reuse
-   const template = `
-   <main>
-   <figure><img src= ${student.Image}>
-   <figcaption><h1> ${student.Name} </h1></figcaption></figure>
+   const template = 
+    `<body>
+    <main class="gallery">
+<article class="scene">
+<div class="card">
+   <section class="front face"><img src= ${student.Image}>
+   <figcaption><h1 class="title"> ${student.Name} </h1></figcaption>
+   </section>
+   <section class="back face"><div class="description">
   <p>${student.Emoji}</p>
   <blockquote>${student.Quote}</blockqoute>
   <h5>${student.Superpower}</h5>
-  </main>
+</div>
+   </section>
+</article>
+</main>
+</body>
+
 `
-    gallery.insertAdjacentHTML(`afterbegin`, template) ;
+
+
+   gallery.insertAdjacentHTML(`afterbegin`, template) ;
   });
   
 });
 
+  
 
- //console.log(data);
+
+
+
+
+
+
+
  // console.log(data[9].Superpower);
  // console.log(data[2].Emoji);
  // console.log(data[1].Quote);
