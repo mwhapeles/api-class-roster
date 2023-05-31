@@ -66,6 +66,7 @@ fetch( dataSource )
   <p>${student.Emoji}</p>
   <blockquote>${student.Quote}</blockqoute>
   <h5>${student.Superpower}</h5>
+  <p class='color'>${student.Color}</p>
 </div>
    </section>
 </article>

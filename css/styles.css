@@ -24,7 +24,12 @@ main{
 
 }
 
+.color{
+  font-family: "Sora-Light";
+  font-size: 1em;
+  max-height: 20%;
 
+}
 
 /* scene */
 .scene {
@@ -261,7 +266,6 @@ article {
 /* Do an horizontal flip when you move the mouse over the flip box container */
 .scene:hover {
   transform: rotateY(180deg) scale(1.25);
-
 }
 
 
