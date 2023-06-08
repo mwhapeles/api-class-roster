@@ -24,6 +24,14 @@ main{
 
 }
 
+
+p{
+font-family: 'Sora-Light';
+font-size: 2em;
+
+}
+
+
 .color{
   font-family: "Sora-Light";
   font-size: 1em;
@@ -56,6 +64,11 @@ main{
   /* preserve child 3d   */
   transform-style: preserve-3d;
   border-radius: 20% 20% 20% 20%;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: all 0.7s ease-in;
+  
 }
 
 /* face */
@@ -108,16 +121,11 @@ max-width:fit-content;
 }
 
 .description {
-  display: grid;
-grid-template-columns: 100%;
-grid-template-rows: 1fr 1fr 1fr;
-
+  display: block;
   margin: auto;
   align-content: center;
-
   font-family:'Satoshi-Light';
-  max-width: 75%;
-  max-height: 75%;
+  max-height: 100%;
 
 }
 
@@ -263,10 +271,27 @@ article {
   transform-style: preserve-3d;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
+/* Do an horizontal flip when you move the mouse over the flip box container 
 .scene:hover {
   transform: rotateY(180deg) scale(1.25);
 }
 
+*/
 
 
+
+
+.card .active .description {
+  opacity: 1;
+  transition:opacity 1500ms ease-in; 
+}
+
+@media (max-width: 480px) {
+  .card-container {
+    width: 100vw;
+  }
+  .card:nth-last-of-type(4),
+  .card:nth-last-of-type(5) {
+    display: none;
+  }
+}

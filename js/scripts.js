@@ -72,13 +72,24 @@ fetch( dataSource )
 </article>
 </main>
 </body>
-
 `
-
-
-   gallery.insertAdjacentHTML(`afterbegin`, template) ;
-  });
+forEach( (template) => { 
+   const cards = document.querySelectorAll(".card");
+   cards.forEach((c) => {
+   c.addEventListener("click", () => {
+     removeactive();
+     c.classList.add("active");
   
+   });
+ });
+ 
+ function removeactive() {
+   cards.forEach((c) => {
+     c.classList.remove("active");
+ )
+   gallery.insertAdjacentHTML(`afterbegin`, template, ) ;
+  });
+});
 });
 
   
